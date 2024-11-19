@@ -52,14 +52,23 @@ let eliminarPrestamo = (oficina) => {
 let listarPrestamo = (oficina, salida) => {
   salida.innerHTML = `<table>
     <tr>
-    <th>__Cliente__</th>
-    <th>__Codigo__</th>
-    <th>__Prestamo__</th>
-    <th>__Meses__</th>
+    <th>Cliente</th>
+    <th>Codigo</th>
+    <th>Prestamo</th>
+    <th>Meses</th>
     </tr>
+    <tbody id="datos">
+    </tbody>
     </table>`;
   oficina.prestamos.forEach((prestamo) => {
-    salida.innerHTML += `___${prestamo.cliente}_______${prestamo.codigo}________${prestamo.prestamo}_______${prestamo.meses}___<br>`;
+    document.getElementById("datos").innerHTML += `
+    <tr>
+    <td>${prestamo.cliente}</td>
+    <td>${prestamo.codigo}</td>
+    <td>${prestamo.prestamo}</td>
+    <td>${prestamo.meses}</td>
+    </tr>`
+    ;
   });
 };
 
@@ -68,11 +77,13 @@ let montoFinal = (oficina, salida) => {
 };
 
 let clientes2Meses = (oficina, salida) => {
-  salida.innerHTML = `Los clientes que solicitaron un prestamo de 2 meses son: ${oficina.clientesPrestamo2Meses()} `;
+  salida.innerHTML = `Los clientes que solicitaron un prestamo de 2 meses son:
+   ${oficina.clientesPrestamo2Meses()} `;
 };
 
 let prestamoMinimo = (oficina, salida) => {
-  salida.innerHTML = `Los clientes que solicitaron un prestamo mínimo son: ${oficina.clientesPrestamoMinimo()} `;
+  salida.innerHTML = `Los clientes que solicitaron un prestamo mínimo son:
+   ${oficina.clientesPrestamoMinimo()} `;
 };
 
 let salida1 = document.getElementById("salida1"),
