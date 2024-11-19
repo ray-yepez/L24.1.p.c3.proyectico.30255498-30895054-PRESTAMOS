@@ -1,6 +1,0 @@
-- Por qué no tabla? (index.js/ln 52) ✓
-- Aprovechar formato multilínea (66,70,74 íb) ✓
-- Qué se hace con la comisión 
-- Los préstamos no se deberían descontar de la caja?
-                                           
-                                           
