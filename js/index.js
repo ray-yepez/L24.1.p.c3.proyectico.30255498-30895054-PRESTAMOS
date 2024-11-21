@@ -90,9 +90,9 @@ let salida1 = document.getElementById("salida1"),
   salida2 = document.getElementById("salida2"),
   opciones = document.getElementById("opciones");
 salida1.innerHTML = `<br>Seleccione una opción:
-    <br>(1) Agregar artículo
-    <br>(2) Listar artículos
-    <br>(3) Eliminar artículo
+    <br>(1) Agregar préstamo
+    <br>(2) Listar préstamo
+    <br>(3) Eliminar préstamo
     <br>(4) Mostrar monto final disponible
     <br>(5) Mostrar clientes con 2 meses de prestamo
     <br>(6) Mostrar clientes con el prestamo mínimo
